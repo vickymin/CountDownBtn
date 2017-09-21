@@ -1,5 +1,6 @@
 {
   "parser": "babel-eslint",
+  "root": "true",
   "rules": {
     // http://eslint.org/docs/rules/
     // Possible Errors
@@ -159,7 +160,7 @@
     "es6": true
   },
   "parserOptions": {
-    "jsx": true,
+    "jsx": true
   },
   "ecmaFeatures": {
     "classes": true,

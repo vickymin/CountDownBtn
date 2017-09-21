@@ -4,7 +4,7 @@ export default class CountDownBtn extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      btnContent: this.props.seconds
+      btnContent: this.props.seconds,
     }
   }
 
@@ -18,13 +18,13 @@ export default class CountDownBtn extends Component {
         leftSeconds--
       }
       this.setState({
-        btnContent: leftSeconds
+        btnContent: leftSeconds,
       })
     }, 1000)
   }
 
   render() {
-    return(
+    return (
       <button
         onClick={this.countDown}
       >
