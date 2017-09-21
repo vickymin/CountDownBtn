@@ -1,0 +1,22 @@
+.app-btn {
+  text-align: center;
+  cursor: pointer;
+  width: 50px;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  font-size: 15px;
+  text-align: center;
+  border: 1px solid transparent;  
+  border-radius: 4px;
+  outline: none;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+  color: rgba(0,0,0,.65);
+  background-color: #fff;
+  border-color: #d9d9d9;
+}
+
+.app-btn:hover, .app-btn:active {
+  color: #1DA57A;
+  border-color: #1DA57A;  
+}

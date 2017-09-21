@@ -1,4 +1,4 @@
-# Countdown
+## Countdown
 
 #### Quick Start
 ```bash
