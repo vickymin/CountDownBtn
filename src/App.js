@@ -38,9 +38,11 @@ class App extends Component {
       <div className='app-main'>
         <input
           onChange={this.handleChange}
+          className={'app-input'}
         ></input>
         <CountDownBtn
           ref='countDownBtn'
+          className={'app-btn'}
           seconds={5}
           initContent={'获取验证码'}
           validation={validation}

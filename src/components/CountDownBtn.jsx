@@ -53,7 +53,6 @@ export default class CountDownBtn extends Component {
     return (
       <button
         disabled={ !validation || disabled }
-        style={{ minWidth: '140px' }}
         onClick={ this.countDown }
         {...other}
       >
