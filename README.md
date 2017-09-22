@@ -11,7 +11,7 @@ run in node v4.0.0+
 # First Step
 $ npm install
 
-# start webpack compiling and dev server
+# start webpack compiling and server
 $ npm start
 open http://localhost:3000/ in Browser
 
@@ -23,14 +23,14 @@ $ npm test
 
 ### Component API
 | Property | Description | Type | Default |
-| ---------| --------- | ---- | --------- |
+| ---------| ------- | ---- | --------- |
 | seconds | The counting seconds | number | 60 |
-| initContent | The init button content | string | 获取验证码 |
+| initContent | The initial button content | string | 获取验证码 |
 | waitingContent | The content when waiting | string | {seconds}s后可再次发送 |
 | onSubmit | The handler function to send request | function | - |
 | validation | The validation status of the content of input or other components | boolean | - |
 
-`resetBtn` is an exposed function of this component, which can reset the button to init status (e.g., `this.refs.countDownBtn.resetBtn()`)
+`resetBtn` is an exposed function of this component, which can reset the button to initial status (e.g., `this.refs.countDownBtn.resetBtn()`)
 
 
 ### Technology Stack
