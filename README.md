@@ -1,7 +1,13 @@
+
 ## React Countdown Component
 
-#### Quick Start
+A simple react countdown button component
+
+### Quick Start
 ```bash
+
+run in node v4.0.0+
+
 # First Step
 $ npm install
 
@@ -10,15 +16,29 @@ $ npm start
 open http://localhost:3000/ in Browser
 
 # run test cases
-$ npm run test
+$ npm test
 
 ```
 
-#### Technology Stack
+
+### Component API
+| Property | Description | Type | Default |
+| ---------| --------- | ---- | --------- |
+| seconds | The counting seconds | number | 60 |
+| initContent | The init button content | string | 获取验证码 |
+| waitingContent | The content when waiting | string | {seconds}s后可再次发送 |
+| onSubmit | The handler function to send request | function | - |
+| validation | The validation status of the content of input or other components | boolean | - |
+
+`resetBtn` is an open function of this component, which can reset the button to init satus (e.g., `this.refs.countDownBtn.resetBtn()`)
+
+
+### Technology Stack
 - ECMAScript® 2015
 - React
 
-#### Code Standards
+
+### Code Standards
 Use `.eslint` to uniform code style, some key points:
 - no semicolon
 - no unnecessary white space and blank lines(no more than two lines)
@@ -26,27 +46,3 @@ Use `.eslint` to uniform code style, some key points:
 - no varibles which is defined but never used
 - attribute value in html/jsx sholud be single quotes
 - use `===` instead of `==`
-
-#### GIT Commit Msg:
-Msg layout: `[<type>](<scope>)`
-
-`<type>`:
-- done (finish new feature for the user, not a new feature for build script)
-- WIP (work in progress)
-- fix (bug fix for the user, not a fix to a build script)
-- doc (changes to the documentation)
-- style (formatting, missing semi colons, etc; no production code change)
-- refactor (refactoring production code, eg. renaming a variable)
-- test (adding missing tests, refactoring tests, update mock api etc; no production code change)
-- chore (updating build script etc; no production code change)
-- Merge (merge with somebody)
-
-`<scope>`:
-- init
-- core
-- util
-- runner
-- module
-- player
-- config
-- mockAPI
