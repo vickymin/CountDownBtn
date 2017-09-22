@@ -5,8 +5,9 @@
 }
 
 .app-input {
+  width: 100px;  
   height: 27px;
-  text-align: center;   
+  padding: 1px 10px;
   border: 1px solid #d9d9d9;
   border-radius: 4px;
   outline: none;  

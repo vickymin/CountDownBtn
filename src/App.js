@@ -38,6 +38,7 @@ export default class App extends Component {
       <div className='app-main'>
         <input
           onChange={this.handleChange}
+          placeholder={'请输入手机号'}
           className={'app-input'}
         ></input>
         <CountDownBtn
