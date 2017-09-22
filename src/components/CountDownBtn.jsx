@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '../styles/CountDownBtn.css'
+import './CountDownBtn.css'
 
 export default class CountDownBtn extends Component {
   constructor(props) {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './styles/App.css'
+import './App.css'
 import CountDownBtn from './components/CountDownBtn'
 import { getCaptcha } from './mockApi'
 
