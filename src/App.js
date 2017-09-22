@@ -3,7 +3,7 @@ import './styles/App.css'
 import CountDownBtn from './components/CountDownBtn'
 import { getCaptcha } from './mockApi'
 
-class App extends Component {
+export default class App extends Component {
 
   constructor() {
     super()
@@ -12,7 +12,7 @@ class App extends Component {
     }
   }
 
-  submit = ()=> {
+  submit = () => {
     // 参数可为fail/success, 分别模拟后端返回状态
     getCaptcha('success')
     .catch(() => {
@@ -45,13 +45,11 @@ class App extends Component {
           className={'app-btn'}
           seconds={5}
           initContent={'获取验证码'}
+          waitingContent={'{seconds}s后可再次发送'}
           validation={validation}
           onSubmit={this.submit}
-          waitingContent={'{seconds}s后可再次发送'}
         />
       </div>
     )
   }
 }
-
-export default App

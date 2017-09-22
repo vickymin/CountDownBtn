@@ -1,4 +1,4 @@
-## Countdown
+## React Countdown Component
 
 #### Quick Start
 ```bash
@@ -9,10 +9,8 @@ $ npm install
 $ npm start
 open http://localhost:3000/ in Browser
 
-# start mock api if needed
-$ npm run api
-
 # run test cases
+$ npm run test
 
 ```
 

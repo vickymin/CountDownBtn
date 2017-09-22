@@ -13,12 +13,16 @@ export default class CountDownBtn extends Component {
   }
 
   componentWillUnmount() {
+    this.clearTimer()
+  }
+
+  clearTimer = () => {
     clearInterval(this.timer)
   }
 
-  resetBtn = ()=> {
+  resetBtn = () => {
     const { initContent } = this.props
-    clearInterval(this.timer)
+    this.clearTimer()
     this.setState({
       content: initContent,
       disabled: false,

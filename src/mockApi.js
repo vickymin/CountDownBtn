@@ -1,13 +1,20 @@
 export function getCaptcha(mockResponseStatus) {
   return new Promise((resolve, reject) => {
     const statusMap = {
-      success: () => {
-        resolve({ status: 'success' })
+      success: {
+        seconds: 2000,
+        funct: () => {
+          resolve({ status: 'success' })
+        },
       },
-      fail: () => {
-        reject({ status: 'fail' })
+      fail: {
+        seconds: 3000,
+        func: () => {
+          reject({ status: 'fail' })
+        },
       },
     }
-    setTimeout(statusMap[mockResponseStatus], 2000)
+    const status = statusMap[mockResponseStatus]
+    setTimeout(status.func, status.seconds)
   })
 }
