@@ -12,6 +12,12 @@ export default class CountDownBtn extends Component {
     }
   }
 
+  static defaultProps = {
+    seconds: 60,
+    initContent: '获取验证码',
+    waitingContent: '{seconds}s后可再次发送',
+  }
+
   componentWillUnmount() {
     this.clearTimer()
   }

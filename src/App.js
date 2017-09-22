@@ -45,7 +45,7 @@ export default class App extends Component {
           className={'app-btn'}
           seconds={5}
           initContent={'获取验证码'}
-          waitingContent={'{seconds}s后可再次发送'}
+          waitingContent={'请耐心等待{seconds}s'}
           validation={validation}
           onSubmit={this.submit}
         />
