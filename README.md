@@ -30,7 +30,7 @@ $ npm test
 | onSubmit | The handler function to send request | function | - |
 | validation | The validation status of the content of input or other components | boolean | - |
 
-`resetBtn` is an open function of this component, which can reset the button to init satus (e.g., `this.refs.countDownBtn.resetBtn()`)
+`resetBtn` is an exposed function of this component, which can reset the button to init status (e.g., `this.refs.countDownBtn.resetBtn()`)
 
 
 ### Technology Stack
@@ -43,6 +43,6 @@ Use `.eslint` to uniform code style, some key points:
 - no semicolon
 - no unnecessary white space and blank lines(no more than two lines)
 - camel case
-- no varibles which is defined but never used
+- no varible which is defined but never used
 - attribute value in html/jsx sholud be single quotes
 - use `===` instead of `==`

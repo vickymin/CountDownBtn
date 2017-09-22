@@ -1,8 +1,6 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-import App from '../App'
 import CountDownBtn from './CountDownBtn'
-import { shallow, mount } from 'enzyme'
+import { shallow } from 'enzyme'
 import { getCaptcha } from '../mockApi'
 
 it('disabled when validation false', () => {
@@ -54,18 +52,19 @@ it('reset btn after countdown', (done) => {
   expect(countDownBtn.text()).toBe(waitingContent.replace('{seconds}', seconds))
   setTimeout(() => {
     try {
-      expect(countDownBtn.prop('disabled')).toBe(false)      
+      expect(countDownBtn.prop('disabled')).toBe(false)
       expect(countDownBtn.text()).toBe(initContent)
-			done()
-		} catch (err) {
-			done.fail(err)
-		}
+      done()
+    } catch (err) {
+      done.fail(err)
+    }
   }, seconds * 1000 + 100)
   expect(submit.mock.calls.length).toBe(1)
 })
 
 it('reset when submit request failed', (done) => {
   const initContent = '获取验证码'
+  let countDownBtn
   const submit = () => {
     getCaptcha('fail')
     .catch(() => {
@@ -73,13 +72,13 @@ it('reset when submit request failed', (done) => {
       try {
         expect(countDownBtn.prop('disabled')).toBe(false)
         expect(countDownBtn.text()).toBe(initContent)
-        done()        
-      } catch(err) {
-        done.fail(err)        
-      } 
+        done()
+      } catch (err) {
+        done.fail(err)
+      }
     })
   }
-  const countDownBtn = shallow(
+  countDownBtn = shallow(
     <CountDownBtn
       ref='countDownBtn'
       seconds={4}
@@ -89,7 +88,6 @@ it('reset when submit request failed', (done) => {
       onSubmit={submit}
     />
   )
-
   countDownBtn.simulate('click')
 })
 
@@ -103,8 +101,8 @@ it('did unmount', () => {
       onSubmit={() => {}}
     />
   )
-  const spy = jest.spyOn(countDownBtn.instance(), 'clearTimer')    
-  countDownBtn.simulate('click')  
+  const spy = jest.spyOn(countDownBtn.instance(), 'clearTimer')
+  countDownBtn.simulate('click')
   countDownBtn.unmount()
 
   expect(spy).toHaveBeenCalledTimes(1)

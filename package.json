@@ -51,7 +51,8 @@
   "scripts": {
     "start": "BROWSER=none node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "lint": "./node_modules/.bin/eslint src"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -81,8 +82,5 @@
     "presets": [
       "react-app"
     ]
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   }
 }

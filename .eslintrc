@@ -157,7 +157,8 @@
   "env": {
     "browser": true,
     "node": true,
-    "es6": true
+    "es6": true,
+    "jest": true
   },
   "parserOptions": {
     "jsx": true
@@ -168,9 +169,7 @@
     "experimentalObjectRestSpread": true
   },
   "globals": {
-    "sinon": true,
-    "expect": true,
-    "SimpleMDE": true
+    "jest": true
   },
   "plugins": [
     "react"
